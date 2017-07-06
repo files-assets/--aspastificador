@@ -39,10 +39,14 @@
             '  <span class="non-select" data-line="' + _index + '"></span>',
             '</td>',
             '<td class="code-column">',
-            '  ' + $('<code>', { text: '\'' + _line + '\',' }).prop('outerHTML'),
+            '  <code class="code-to-text"></code>',
             '</td>'
           ].join('\n')
-        }).appendTo('#new-array-zone table');
+        })
+          .appendTo('#new-array-zone table')
+            .find('.code-to-text')
+              .text('\'' + _line + '\',')
+        ;
 
         $('#copy-content').text($('#copy-content').text() + '\'' + line + '\',\n');
       });
