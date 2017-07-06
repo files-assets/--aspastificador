@@ -44,7 +44,7 @@
           ].join('\n')
         }).appendTo('#new-array-zone table');
 
-        $('#copy-content').text($('#copy-content').text() + line + '\n');
+        $('#copy-content').text($('#copy-content').text() + '\'' + line + '\',\n');
       });
     });
 
