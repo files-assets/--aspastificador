@@ -27,7 +27,7 @@
 
         var _index = index + 1;
         var _line  = line
-          .replace(/\s/g, '<span> </span>')
+          .replace(/(\s)/g, '$1$1')
           .replace(/\\/g, '\\\\')
           .replace(/'/g, '\\\'')
         ;
