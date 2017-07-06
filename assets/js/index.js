@@ -39,7 +39,7 @@
             '  <span class="non-select" data-line="' + _index + '"></span>',
             '</td>',
             '<td class="code-column">',
-            ' <code>\'' + _line + '\',</code>',
+            '  ' + $('<code>', { text: '\'' + _line + '\',' }).prop('outerHTML'),
             '</td>'
           ].join('\n')
         }).appendTo('#new-array-zone table');
