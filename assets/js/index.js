@@ -14,6 +14,10 @@
         $('#new-array-zone table').html('');
       }
 
+      if ($('#copy-content').text().length > 0) {
+        $('#copy-content').text('');
+      }
+
       var array = $('#array-text')
         .val()
           .split('\n')
@@ -27,7 +31,6 @@
 
         var _index = index + 1;
         var _line  = line
-          .replace(/(\s)/g, '$1$1')
           .replace(/\\/g, '\\\\')
           .replace(/'/g, '\\\'')
         ;
@@ -39,7 +42,7 @@
             '  <span class="non-select" data-line="' + _index + '"></span>',
             '</td>',
             '<td class="code-column">',
-            '  <code class="code-to-text"></code>',
+            '  <pre class="code-to-text"></pre>',
             '</td>'
           ].join('\n')
         })
