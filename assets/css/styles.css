@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 17px;
+  color: #212121;
+}
+
+code,
+pre,
+textarea {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 15px;
+}
+
+.wrap {
+  padding: 0 20%;
+}
+
+h1 {
+  padding: 0 20%;
+  font-weight: 300;
+  font-size: 55px;
+  margin: 35px 0;
+}
+
+textarea#array-text {
+  width: 100%;
+  border: solid 1px #ddd;
+  resize: none;
+  height: 180px;
+  border-radius: 3px;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+ins#new-array-zone {
+  display: block;
+  border: solid 1px #ddd;
+  background-color: #ddd;
+  color: #565656;
+  border-radius: 2px;
+  padding: 20px;
+  padding-left: 30px;
+  max-height: 350px;
+  overflow-y: auto;
+  border-collapse: collapse;
+  text-decoration: none;
+  margin: 0 20%;
+  position: relative;
+}
+
+.btn-copy {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+
+ins#new-array-zone table td.code-column {
+  margin-left: 10px;
+  display: block;
+}
+
+span.non-select {
+  opacity: .6;
+}
+
+span.non-select::before {
+  content: attr(data-line)".";
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.toast-alert {
+  width: 260px;
+  background-color: rgba(36, 36, 36, 0.81);
+  color: #fff;
+  border-radius: 3px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px;
+}
+
+a.home-link {
+  text-decoration: none;
+  border: none;
+  color: #212121 !important;
+}
+
+a.home-link:hover {
+  border: none;
+  color: #1b1b1b;
+  text-decoration: none;
+}
+
+a.home-link:hover {
+  color: #65b940!important;
+}
+
+
+/**
+ **/
+
+a,
+a:active,
+a:link,
+a:visited,
+a:focus {
+  color: #2688dc;
+  text-decoration: none;
+  border-bottom: solid 1px transparent;
+  outline: 0;
+}
+
+a:hover {
+  border-bottom-color: #2688dc;
+}
+
+a[class*="icon"]:hover,
+a.fa:hover {
+  border-bottom-color: transparent;
+  color: #1f6db0;
+}
+
+
+
+.btn {
+  border: solid 1px #e4e4e4;
+  background: linear-gradient(180deg, #fff 0%, #efefef 100%);
+  padding: .575rem 1.1rem;
+  border-radius: .175rem;
+  font-weight: 600;
+  color: #686a6b;
+  cursor: pointer;
+}
+
+.btn:focus {
+  border-color: #d3d3d3;
+  box-shadow: inset 0 -5px 40px rgba(120, 120, 120, 0.1), inset 0 1px 2px rgba(27, 31, 35, 0.075), 0 0 0 0.2em rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.btn:hover {
+  box-shadow: inset 0 -100px rgba(108, 108, 108, 0.1);
+}
+
+.btn.block {
+  display: block;
+  width: 100%;
+}
+
+
+
+.btn.btn-primary {
+  color: #fff;
+  border-color: #337ab7;
+  background: #337ab7;
+  background: linear-gradient(180deg, #3e93dc 0%, #337ab7 100%);
+}
+
+.btn.btn-primary:focus {
+  border-color: #3275af;
+  box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075), 0 0 0 0.2em rgba(56, 142, 216, 0.58);
+  outline: none;
+}
+
+.btn.btn-primary:hover {
+  box-shadow: inset 0px -100px rgba(202, 202, 202, 0.29);
+}
+
+
+
+.btn.btn-sucess {
+  color: #fff;
+  border-color: #559a37;
+  background: #6cc644;
+  background: linear-gradient(180deg, #6cc644 0%, #559937 100%);
+}
+
+.btn.btn-sucess:focus {
+  border-color: #4f9032;
+  box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075), 0 0 0 0.2em rgba(105, 192, 66, 0.45);
+  outline: none;
+}
+
+.btn.btn-sucess:hover {
+  box-shadow: inset 0px -100px rgba(202, 202, 202, 0.29);
+}
+
+
+
+.btn.btn-danger {
+  color: #fff;
+  border-color: #bd2c00;
+  background: #e7592e;
+  background: linear-gradient(180deg, #f86b40 0%, #bd2c00 100%);
+}
+
+.btn.btn-danger:focus {
+  border-color: #aa2c05;
+  box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075), 0 0 0 0.2em rgba(197, 53, 9, 0.66);
+  outline: none;
+}
+
+
+.btn.btn-danger:hover {
+  box-shadow: inset 0px -100px rgba(202, 202, 202, 0.29);
+}
+
+
+
+.form-field {
+  background-color: #fff;
+  border: 1px solid #d4d4d4;
+  padding: 6px 8px;
+  margin: 10px 0 0;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  color: #555;
+  line-height: 20px;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075);
+  outline: none;
+}
+
+.form-field:focus {
+  border-color: #2087ff;
+  box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075), 0 0 0 0.2em rgba(3, 100, 209, 0.3);
+  outline: none;
+}
+
+
+
+.color-sucess {
+  color: #65b940;
+}
